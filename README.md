@@ -147,3 +147,6 @@ Solution:
 - Run `rm -rf node_modules` in the repository and then `npm install` again
 
 ## Recording
+
+1. [Desktop Screens](./recordings//Desktop.mov)
+2. [Mobile Screens](./recordings/Mobile.mov)
