@@ -4,6 +4,8 @@ import { ProfileContext, StoreProfile } from '../../../store/profile/context';
 import { UserBio } from '../../organisms/UserBio/UserBio';
 import { FeedPost } from '../../organisms/FeedPost/FeedPost';
 import styles from './UserProfile.module.css';
+import { NotFound } from '../NotFound/NotFound';
+import { Status } from '../../../types/status';
 
 export const UserProfile = () => {
   const { userName } = useParams<{ userName: string }>();
@@ -41,6 +43,8 @@ export const UserProfile = () => {
           <FeedPost key={post.id} {...post} />
         ))}
       </ul>
+
+      {state.profile.status === Status.Error ? <NotFound /> : null}
     </article>
   );
 };
