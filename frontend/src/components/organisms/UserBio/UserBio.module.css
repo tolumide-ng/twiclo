@@ -1,0 +1,55 @@
+.bio {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  padding: 0 0.5rem 1rem;
+  border-bottom: 1px solid #000;
+}
+
+.bioData {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.bioAviImg {
+  height: 100px;
+  width: 100px;
+  object-fit: fill;
+  border-radius: 100%;
+}
+
+.bioAviName > *,
+.bioMeta > *,
+.bioMetaData > * {
+  margin: 0;
+}
+
+.bioAviDisplayname {
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.bioAviUsername,
+.bioMetaLocation {
+  color: #6b6b6b;
+  font-size: 15px;
+}
+
+.bioMetaFollows {
+  display: flex;
+  gap: 1rem;
+}
+
+.bioMetaData {
+  display: flex;
+  gap: 0.15rem;
+}
+
+.bioMetaDataValue {
+  font-weight: bold;
+}
+
+.bioMetaDataKey {
+  color: #6b6b6b;
+}

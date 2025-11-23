@@ -2,6 +2,7 @@ import React from 'react';
 import { BrowserRouter, Route, Routes } from 'react-router';
 import Loader from './components/molecules/Loader/Loader';
 import { HomeFeed } from './components/pages/HomeFeed/HomeFeed';
+import { UserProfile } from './components/pages/UserProfile/UserProfile';
 
 export default function AppRouter() {
   return (
@@ -11,6 +12,7 @@ export default function AppRouter() {
           <main className="app">
             <Routes>
               <Route path="/" element={<HomeFeed />} />
+              <Route path="/:userName" element={<UserProfile />} />
             </Routes>
           </main>
         </div>
