@@ -7,12 +7,15 @@
     "frontend"
   ],
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "concurrently \"npm:backend\" \"npm:frontend\"",
+    "backend": "npm --prefix backend run dev",
+    "frontend": "npm --prefix frontend run dev"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "devDependencies": {
+    "concurrently": "^9.2.1",
     "typescript": "^5.9.3"
   }
 }
