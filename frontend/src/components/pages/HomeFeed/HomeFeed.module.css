@@ -1,0 +1,13 @@
+.feed {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.feedUl {
+  display: flex;
+  flex-direction: column;
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
