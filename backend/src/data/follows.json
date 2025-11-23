@@ -1,0 +1,32 @@
+[
+  {
+    "followers": 4,
+    "following": 3,
+    "id": "b2a6c848-c4ca-11f0-98e2-629fd5187aa2",
+    "userid": "b6093062-c4c9-11f0-828d-629fd5187aa2"
+  },
+  {
+    "followers": 3,
+    "following": 4,
+    "id": "c3cd1226-c4ca-11f0-a16c-629fd5187aa2",
+    "userid": "bace00a0-c4c9-11f0-84e3-629fd5187aa2"
+  },
+  {
+    "followers": 3,
+    "following": 3,
+    "id": "dbb12706-c4ca-11f0-b103-629fd5187aa2",
+    "userid": "73c10990-c4ca-11f0-9c3c-629fd5187aa2"
+  },
+  {
+    "followers": 3,
+    "following": 3,
+    "id": "9b249e0e-c595-11f0-a561-629fd5187aa2",
+    "userid": "3b0fa44c-c594-11f0-86de-629fd5187aa2"
+  },
+  {
+    "followers": 1,
+    "following": 1,
+    "id": "9b7cf0ea-c595-11f0-aac5-629fd5187aa2",
+    "userid": "529e345c-c594-11f0-9546-629fd5187aa2"
+  }
+]

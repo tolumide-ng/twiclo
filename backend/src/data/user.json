@@ -1,0 +1,42 @@
+[
+  {
+    "username": "jane",
+    "displayName": "Jane Doe",
+    "bio": "Airspace ✈️ || ISC2 CC|| Aspiring Network security experts || Passionate About Aviation and Information Security",
+    "location": "South Korea",
+    "id": "b6093062-c4c9-11f0-828d-629fd5187aa2",
+    "avatar": "https://fastly.picsum.photos/id/237/200/300.jpg?hmac=TmmQSbShHz9CdQm0NkEjx1Dyh_Y984R9LpNrpvH2D_U"
+  },
+  {
+    "username": "jack",
+    "displayName": "Jack Doe",
+    "bio": "5✰ Human",
+    "location": "London",
+    "id": "bace00a0-c4c9-11f0-84e3-629fd5187aa2",
+    "avatar": "https://fastly.picsum.photos/id/866/200/300.jpg?hmac=rcadCENKh4rD6MAp6V_ma-AyWv641M4iiOpe1RyFHeI"
+  },
+  {
+    "username": "willy",
+    "displayName": "Will Willy",
+    "bio": "Tradition is not the worship of ashes, but the preservation of fire",
+    "location": "Redmond, USA",
+    "id": "73c10990-c4ca-11f0-9c3c-629fd5187aa2",
+    "avatar": "https://fastly.picsum.photos/id/870/200/300.jpg?blur=2&grayscale&hmac=ujRymp644uYVjdKJM7kyLDSsrqNSMVRPnGU99cKl6Vs"
+  },
+  {
+    "username": "bosco",
+    "displayName": "Sammy Bosco",
+    "bio": "Nothing to see here",
+    "location": "Berlin, Germany",
+    "id": "73c10990-c4ca-11f0-9c3c-629fd5187aa2",
+    "avatar": "https://fastly.picsum.photos/id/1043/200/300.jpg?blur=2&hmac=w4703anbSFwWGpo6RIZMqZM7rXBl56_i4dnm_-6Zk8s"
+  },
+  {
+    "username": "atanda",
+    "displayName": "Ayomide Thunder",
+    "bio": "Say Cheese",
+    "location": "Silicon Valley",
+    "id": "73c10990-c4ca-11f0-9c3c-629fd5187aa2",
+    "avatar": "https://fastly.picsum.photos/id/906/200/300.jpg?grayscale&hmac=uRU4GFbowNCOgIqQLrvszEojFy1rqC-53rJimR4b5P4"
+  }
+]

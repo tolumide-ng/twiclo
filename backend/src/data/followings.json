@@ -1,0 +1,39 @@
+[
+  {
+    "userId": "b6093062-c4c9-11f0-828d-629fd5187aa2",
+    "following": [
+      "bace00a0-c4c9-11f0-84e3-629fd5187aa2",
+      "73c10990-c4ca-11f0-9c3c-629fd5187aa2",
+      "3b0fa44c-c594-11f0-86de-629fd5187aa2"
+    ]
+  },
+  {
+    "userId": "bace00a0-c4c9-11f0-84e3-629fd5187aa2",
+    "following": [
+      "3b0fa44c-c594-11f0-86de-629fd5187aa2",
+      "73c10990-c4ca-11f0-9c3c-629fd5187aa2",
+      "b6093062-c4c9-11f0-828d-629fd5187aa2",
+      "529e345c-c594-11f0-9546-629fd5187aa2"
+    ]
+  },
+  {
+    "userId": "73c10990-c4ca-11f0-9c3c-629fd5187aa2",
+    "following": [
+      "bace00a0-c4c9-11f0-84e3-629fd5187aa2",
+      "3b0fa44c-c594-11f0-86de-629fd5187aa2",
+      "b6093062-c4c9-11f0-828d-629fd5187aa2"
+    ]
+  },
+  {
+    "userId": "3b0fa44c-c594-11f0-86de-629fd5187aa2",
+    "following": [
+      "bace00a0-c4c9-11f0-84e3-629fd5187aa2",
+      "73c10990-c4ca-11f0-9c3c-629fd5187aa2",
+      "b6093062-c4c9-11f0-828d-629fd5187aa2"
+    ]
+  },
+  {
+    "userId": "529e345c-c594-11f0-9546-629fd5187aa2",
+    "following": ["b6093062-c4c9-11f0-828d-629fd5187aa2"]
+  }
+]
