@@ -21,11 +21,7 @@
     "noUnusedLocals": true,
     "noUnusedParameters": true,
     "noFallthroughCasesInSwitch": true,
-    "noUncheckedSideEffectImports": true,
-    "paths": {
-      "@/*": ["./src/*"],
-      "@store/*": ["./src/store/*"]
-    }
+    "noUncheckedSideEffectImports": true
   },
   "include": ["src"]
 }
