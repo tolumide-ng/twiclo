@@ -8,7 +8,7 @@ export const config: Config = {
     '^.+\\.tsx?$': [
       'ts-jest',
       {
-        tsconfig: './tsconfig.app.json',
+        tsconfig: './tsconfig.json',
         useESM: true,
       },
     ],
@@ -18,6 +18,7 @@ export const config: Config = {
   coverageProvider: 'v8',
   moduleNameMapper: {
     '^@/(.*)$': '<rootDir>/src/$1',
+    '\\.module\\.css$': 'identity-obj-proxy',
   },
   setupFilesAfterEnv: ['<rootDir>/jest.setup.ts'],
 };
