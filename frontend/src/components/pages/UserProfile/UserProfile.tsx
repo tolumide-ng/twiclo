@@ -1,6 +1,6 @@
 import { useContext, useEffect } from 'react';
 import { useNavigate, useParams } from 'react-router';
-import { ProfileContext } from '../../../store/profile/context';
+import { ProfileContext, StoreProfile } from '../../../store/profile/context';
 import { UserBio } from '../../organisms/UserBio/UserBio';
 import { FeedPost } from '../../organisms/FeedPost/FeedPost';
 import styles from './UserProfile.module.css';
@@ -9,7 +9,7 @@ export const UserProfile = () => {
   const { userName } = useParams<{ userName: string }>();
   const navigate = useNavigate();
 
-  const { state, fetchProfile } = useContext(ProfileContext);
+  const { state, fetchProfile } = useContext<StoreProfile>(ProfileContext);
 
   useEffect(() => {
     if (userName) {

@@ -1,7 +1,7 @@
 import React from 'react';
 import type { Status } from '../../types/status';
-import type { Post } from '../../types/post';
-import type { Profile, ProfileData } from '../../types/profile';
+import type { PostWithAuthor } from '../../types/post';
+import type { ProfileData } from '../../types/profile';
 
 export type ProfileState = {
   profile: {
@@ -12,7 +12,7 @@ export type ProfileState = {
   posts: {
     status: Status;
     error: string | null;
-    data: (Post & { author: Profile })[];
+    data: PostWithAuthor[];
   };
 };
 
@@ -21,6 +21,7 @@ export type StoreProfile = {
   state: ProfileState;
 };
 
-export const ProfileContext = React.createContext<StoreProfile>(
-  {} as StoreProfile,
-);
+export const ProfileContext = React.createContext<StoreProfile>({
+  fetchProfile: () => {},
+  state: {},
+} as unknown as StoreProfile);
