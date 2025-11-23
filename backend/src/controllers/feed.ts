@@ -4,9 +4,15 @@ import userJson from '../data/user.json' assert { type: 'json' };
 import followings from '../data/followings.json';
 import { ResponseGenerator } from '../helpers/responseGenerator';
 import { v4 as uuidv4 } from 'uuid';
+import path from 'node:path';
+import { fileURLToPath } from 'node:url';
+import { writeFile, readFile } from 'node:fs/promises';
+
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
 
 type FeedPost = (typeof feedJson)[number];
-const feed = [...feedJson];
+const FEED_FILE = path.join(__dirname, '../data/feed.json');
 
 export class FeedController {
   static attachAuthor(post: FeedPost) {
@@ -24,9 +30,16 @@ export class FeedController {
     );
   }
 
-  static getFeedFor(req: Request, res: Response) {
+  static async getFeed(): Promise<FeedPost[]> {
+    const raw = await readFile(FEED_FILE, 'utf-8');
+    return JSON.parse(raw) as FeedPost[];
+  }
+
+  static async getFeedFor(req: Request, res: Response) {
     const { userName = '', postId = '' } = req.query;
     const authorId = req.headers['x-user-id'] ?? '';
+
+    const feed = await FeedController.getFeed();
 
     // Profile feed
     if (userName) {
@@ -57,11 +70,15 @@ export class FeedController {
     const userFollows = followings.find((f) => f.userId === authorId);
     const homeFeed = (
       userFollows?.following.length
-        ? feed.filter((post) => userFollows.following.includes(post.author))
+        ? feed.filter(
+            (post) =>
+              userFollows.following.includes(post.author) ||
+              post.author === userFollows.userId,
+          )
         : feed
             .slice()
             .sort((a, b) => b.rtsCount - a.rtsCount)
-            .slice(0, 3)
+            .slice(0, 9)
     ).map(FeedController.attachAuthor);
 
     return ResponseGenerator.sendSuccess(
@@ -71,7 +88,7 @@ export class FeedController {
     );
   }
 
-  static createPost(req: Request, res: Response) {
+  static async createPost(req: Request, res: Response) {
     const authorId = String(req.headers['x-user-id']);
     const { post, replyId } = req.body;
 
@@ -97,7 +114,15 @@ export class FeedController {
       author: authorId,
     };
 
+    const feed = await FeedController.getFeed();
+
     feed.push(newPost);
+
+    try {
+      writeFile(FEED_FILE, JSON.stringify(feed, null, 2), 'utf-8');
+    } catch {
+      return ResponseGenerator.sendError(res, 500, 'Failed to save post');
+    }
 
     return ResponseGenerator.sendSuccess(
       res,

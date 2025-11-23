@@ -1,0 +1,44 @@
+.tweet {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.tweetText {
+  min-width: 100%;
+  border-left: none;
+  border-right: none;
+  padding: 0.5rem;
+  resize: none;
+  outline: none;
+}
+
+.tweetButton {
+  padding: 0.25rem 0.75rem;
+  cursor: pointer;
+  background-color: #e5e7eb;
+  border: 1px solid #d1d5db;
+  border-radius: 0.15rem;
+}
+
+.tweetButton:disabled {
+  cursor: not-allowed;
+}
+
+.tweetFooter {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 0.25rem;
+}
+
+.tweetCharCount {
+  font-size: 14px;
+  color: #555;
+}
+
+.tweetCharCountError {
+  font-size: 14px;
+  font-weight: bold;
+  color: #e0245e;
+}
