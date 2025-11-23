@@ -1,11 +1,10 @@
 import React from 'react';
-import type { Post } from '../../types/post';
+import type { PostWithAuthor } from '../../types/post';
 import type { Status } from '../../types/status';
-import type { Profile } from '../../types/profile';
 
 export type PostsState = {
   status: Status;
-  feed: (Post & { author: Profile })[];
+  feed: PostWithAuthor[];
   error: string | null;
   activePostId?: string;
 };
