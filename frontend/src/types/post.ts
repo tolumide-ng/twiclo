@@ -1,3 +1,5 @@
+import { Profile } from './profile';
+
 export type Post = {
   id: string;
   author: string;
@@ -6,3 +8,5 @@ export type Post = {
   repliesCount: number;
   rtsCount: number;
 };
+
+export type PostWithAuthor = Post & { author: Profile };

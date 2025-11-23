@@ -1,12 +1,9 @@
 import { formatDistanceToNow } from 'date-fns';
 import styles from './FeedPost.module.css';
 import { Link } from 'react-router';
-import type { Post } from '../../../types/post';
-import type { Profile } from '../../../types/profile';
+import type { PostWithAuthor } from '../../../types/post';
 
-type Props = Post & {
-  author: Profile;
-};
+type Props = PostWithAuthor;
 
 export const FeedPost = ({
   author,
